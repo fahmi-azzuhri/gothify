@@ -1,3 +1,3 @@
-module github.com/yourname/gothify
+module github.com/fahmi-azzuhri/gothify
 
 go 1.23
