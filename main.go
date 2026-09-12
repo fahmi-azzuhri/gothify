@@ -99,7 +99,7 @@ func optionsFromFlags(projectName, router, frontend, css, auth, module string, p
 		return Options{}, err
 	}
 	if module == "" {
-		module = "example.com/" + projectName
+		module = "github.com/fahmi-azzuhri/" + projectName
 	}
 	return Options{ProjectName: projectName, Module: module, Router: selectedRouter, Template: selectedFrontend, CSS: selectedCSS, Auth: selectedAuth, PWA: pwa, Embed: embed}, nil
 }
@@ -120,7 +120,7 @@ func createProject(reader *bufio.Reader, requestedName string) {
 	authChoice := choose(reader, "Authentication strategy", []string{"Session-Based (Cookie)", "JWT + Refresh Token", "OAuth2 (Google / GitHub via Goth)"})
 	pwa := confirm(reader, "Add PWA support")
 	embed := confirm(reader, "Embed static assets with go:embed")
-	module := ask(reader, "Go module path", "example.com/"+projectName)
+	module := "github.com/fahmi-azzuhri/" + projectName
 	options := Options{ProjectName: projectName, Module: module, Router: routerChoice, Template: templateChoice, CSS: cssChoice, Auth: authChoice, PWA: pwa, Embed: embed}
 	if err := generate(options); err != nil {
 		fatal(err.Error())

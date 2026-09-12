@@ -87,7 +87,8 @@ go run . create my-app
 ```
 
 The CLI asks for the router, frontend integration, CSS strategy,
-authentication strategy, PWA support, embedded assets, and Go module path.
+authentication strategy, PWA support, and embedded assets. The Go module path
+defaults to `github.com/fahmi-azzuhri/<project-name>`.
 
 ## Non-Interactive Creation
 
@@ -107,15 +108,15 @@ go run . create my-app `
 
 Supported values:
 
-| Flag         | Values                              |
-| ------------ | ----------------------------------- |
-| `--router`   | `chi`, `fiber`, `echo`, `net-http`  |
-| `--template` | `templ`, `alpine`, `inertia`        |
-| `--css`      | `tailwind`, `bulma`, `plain`        |
-| `--auth`     | `session`, `jwt`, `oauth2`          |
-| `--module`   | Any valid Go module path            |
-| `--pwa`      | Enable PWA files                    |
-| `--embed`    | Embed static assets with `go:embed` |
+| Flag         | Values                                          |
+| ------------ | ----------------------------------------------- |
+| `--router`   | `chi`, `fiber`, `echo`, `net-http`              |
+| `--template` | `templ`, `alpine`, `inertia`                    |
+| `--css`      | `tailwind`, `bulma`, `plain`                    |
+| `--auth`     | `session`, `jwt`, `oauth2`                      |
+| `--module`   | Any valid Go module path; overrides the default |
+| `--pwa`      | Enable PWA files                                |
+| `--embed`    | Embed static assets with `go:embed`             |
 
 ## Generated Project
 
