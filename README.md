@@ -45,7 +45,7 @@ go run github.com/fahmi-azzuhri/gothify@latest create my-app
 go run github.com/fahmi-azzuhri/gothify@latest help
 ```
 
-Replace `github.com/fahim-azzuhri/gothify` with the actual repository module path.
+Replace `github.com/fahmi-azzuhri/gothify` with the actual repository module path.
 While developing Gothify locally, use:
 
 ```powershell
