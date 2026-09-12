@@ -35,10 +35,36 @@ JavaScript framework for every project.
 - Go 1.23 or newer
 - Node.js and npm are only required for generated Inertia/Tailwind frontend workflows
 
+## Install the CLI
+
+To use the short command directly:
+
+```powershell
+go install github.com/fahmi-azzuhri/gothify@latest
+```
+
+After installation, make sure Go's binary directory is in your `PATH`:
+
+```text
+%USERPROFILE%\go\bin
+```
+
+Open a new terminal and verify the installation:
+
+```powershell
+gothify help
+```
+
+You can then create a project with:
+
+```powershell
+gothify create my-app
+```
+
 ## Zero-Install Usage
 
-After Gothify is published to a public Go repository, run it from anywhere
-without installing a Gothify binary:
+If you do not want to install the Gothify CLI, use `go run` instead. This
+requires Go, but does not add a `gothify` command to your system:
 
 ```powershell
 go run github.com/fahmi-azzuhri/gothify@latest create my-app
